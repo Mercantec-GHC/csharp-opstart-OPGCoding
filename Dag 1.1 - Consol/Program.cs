@@ -42,9 +42,21 @@ Console.WriteLine(@"c:\invoices\app.exe -j");
 string firstname1 = "Benjamin";
 string message1 = "Hello " + firstname1;
 Console.WriteLine(message);
+string firstName2 = "Benjamin";
+string greeting2 = "Hello";
+string message2 = greeting2 + " " + firstName2 + "!";
+Console.WriteLine(message2);
+string firstName3 = "Bob";
+string greeting3 = "Hello";
+Console.WriteLine(greeting3 + " " + firstName3 + "!");
+string message3 = greeting3 + " " + firstName3 + "!";
+string message4 = $"{greeting3} {firstName3}!";
 
+int version = 11;
+string updateText = "Update to Windows";
+string message5 = $"{updateText} {version}";
+Console.WriteLine(message5);
 
-
-
-
-
+int version2 = 11;
+string updateText2 = "Update to Windows";
+Console.WriteLine($"{updateText2} {version2}!");
