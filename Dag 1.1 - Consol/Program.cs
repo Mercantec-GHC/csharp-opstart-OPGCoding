@@ -19,3 +19,8 @@ firstName = "Søren";
 Console.WriteLine(firstName);
 firstName = "Bob";
 Console.WriteLine(firstName);
+var message = "Hello world!";
+string name = "Bob";
+int number = 3;
+decimal decimalNumber = 34.4m;
+Console.WriteLine("Hello, " + name + "! " + "You have " + number + " messages in your inbox. " + "The temperature is " + decimalNumber + " celsius.");
