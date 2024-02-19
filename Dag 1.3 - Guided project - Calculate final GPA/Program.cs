@@ -35,3 +35,9 @@ totalCreditHours += course5Credit;
 
 int totalGradePoints = 0;
 totalGradePoints += course1Credit * course1Grade;
+totalGradePoints += course2Credit * course2Grade;
+totalGradePoints += course3Credit * course3Grade;
+totalGradePoints += course4Credit * course4Grade;
+totalGradePoints += course5Credit * course5Grade;
+
+Console.WriteLine($"{totalGradePoints} {totalCreditHours}");
