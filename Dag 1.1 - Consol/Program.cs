@@ -1,15 +1,16 @@
-﻿Console.WriteLine(0.25F);
+﻿/*
+Console.WriteLine(0.25F);
 Console.WriteLine(2.625);
 Console.WriteLine(12.39816m);
 Console.WriteLine(true);
 Console.WriteLine(false);
-/* 
+
 string firstName;
 char userOptions;
 int gameScore;
 decimal particlesPerMillion;
 bool processedCustomer;
-*/
+
 string firstName;
 firstName = "Benjamin";
 Console.WriteLine(firstName);
@@ -93,6 +94,43 @@ Console.WriteLine(quotient);
 
 Console.WriteLine($"Modulus of 200 / 5 : {200 % 5}");
 Console.WriteLine($"Modulus of 7 / 5 : {7 % 5}");
+int value = 0;     
+value = value + 5; 
+value += 5;        
+int value2 = 0;     
+value2 = value2 + 1; 
+value2++;
+*/
+
+int value = 1;
+value = value + 1;
+Console.WriteLine("First increment: " + value);
+
+value += 1;
+Console.WriteLine("Second increment: " + value);
+
+value++;
+Console.WriteLine("Third increment: " + value);
+
+value = value - 1;
+Console.WriteLine("First decrement: " + value);
+
+value -= 1;
+Console.WriteLine("Second decrement: " + value);
+
+value--;
+Console.WriteLine("Third decrement: " + value);
+
+
+
+
+
+
+
+
+
+
+
 
 
 
