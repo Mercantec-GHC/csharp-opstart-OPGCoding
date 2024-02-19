@@ -24,3 +24,6 @@ string name = "Bob";
 int number = 3;
 decimal decimalNumber = 34.4m;
 Console.WriteLine("Hello, " + name + "! " + "You have " + number + " messages in your inbox. " + "The temperature is " + decimalNumber + " celsius.");
+Console.WriteLine("Hello World!");
+Console.WriteLine("Hello\nWorld!");
+Console.WriteLine("Hello\tWorld!");
