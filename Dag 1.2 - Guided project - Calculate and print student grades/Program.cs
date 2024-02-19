@@ -1,4 +1,5 @@
 ﻿// initialize variables - graded assignments 
+
 int currentAssignments = 5;
 
 int sophia1 = 93;
@@ -25,6 +26,8 @@ int jeong3 = 98;
 int jeong4 = 100;
 int jeong5 = 97;
 
+
+
 int sophiaSum = sophia1 + sophia2 + sophia3 + sophia4 + sophia5;
 int nicolasSum = nicolas1 + nicolas2 + nicolas3 + nicolas4 + nicolas5;
 int zahirahSum = zahirah1 + zahirah2 + zahirah3 + zahirah4 + zahirah5;
@@ -36,14 +39,16 @@ Console.WriteLine("Zahirah: " + zahirahSum);
 Console.WriteLine("Jeong: " + jeongSum);
 
 
-decimal sophiaScore = sophiaSum / currentAssignments;
-decimal nicolasScore = nicolasSum / currentAssignments;
-decimal zahirahScore = zahirahSum / currentAssignments;
-decimal jeongScore = jeongSum / currentAssignments;
-Console.WriteLine("Sophia: " + sophiaScore);
-Console.WriteLine("Nicolas: " + nicolasScore);
-Console.WriteLine("Zahirah: " + zahirahScore);
-Console.WriteLine("Jeong: " + jeongScore);
+decimal sophiaScore = (decimal)sophiaSum / currentAssignments;
+decimal nicolasScore = (decimal)nicolasSum / currentAssignments;
+decimal zahirahScore = (decimal)zahirahSum / currentAssignments;
+decimal jeongScore = (decimal)jeongSum / currentAssignments;
+
+Console.WriteLine("Sophia: " + sophiaScore + " A");
+Console.WriteLine("Nicolas: " + nicolasScore + " B");
+Console.WriteLine("Zahirah: " + zahirahScore + " B");
+Console.WriteLine("Jeong: " + jeongScore + " A");
+
 
 
 
