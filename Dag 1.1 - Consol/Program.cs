@@ -12,3 +12,4 @@ bool processedCustomer;
 */
 string firstName;
 firstName = "Benjamin";
+Console.WriteLine(firstName);
