@@ -1,2 +1,1 @@
-﻿Console.WriteLine(0.25F);
-Console.WriteLine(1.2F);
+﻿Console.WriteLine(2.625);5
