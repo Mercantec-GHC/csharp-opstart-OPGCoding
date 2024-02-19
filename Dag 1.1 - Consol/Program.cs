@@ -100,7 +100,7 @@ value += 5;
 int value2 = 0;     
 value2 = value2 + 1; 
 value2++;
-*/
+
 
 int value = 1;
 value = value + 1;
@@ -120,6 +120,20 @@ Console.WriteLine("Second decrement: " + value);
 
 value--;
 Console.WriteLine("Third decrement: " + value);
+
+int value = 1;
+value++;
+Console.WriteLine("First: " + value);
+Console.WriteLine($"Second: {value++}");
+Console.WriteLine("Third: " + value);
+Console.WriteLine("Fourth: " + (++value));
+*/
+int fahrenheit = 94;
+decimal Celsius = (fahrenheit - 32) * (5.0m / 9.0m);
+Console.WriteLine("The temperature is " + Celsius + " Celsius.");
+
+
+
 
 
 
