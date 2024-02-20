@@ -22,20 +22,20 @@ if ((roll1 == roll2) || (roll2 == roll3) || (roll1 == roll3))
     total += 2;
 }
 
-if (total > 10)
+if (total >= 16)
 {
-    Console.WriteLine("Great job, you got a lollipop");
+    Console.WriteLine("You won a lollipop");
+}
+else if (total >= 13)
+{
+    Console.WriteLine("You won a peace of cake");
+}
+else if (total == 10)
+{
+    Console.WriteLine("You just won a 1.000.000 air particles");
 }
 else
 {
-    Console.WriteLine("You lost, you owe me a lollipop");
+    Console.WriteLine("You won something borring");
 }
 
-string message = "The quick brown fox jumps over the lazy dog.";
-bool result = message.Contains("dog");
-Console.WriteLine(result);
-
-if (message.Contains("fox"))
-{
-    Console.WriteLine("What does the fox say?");
-}
