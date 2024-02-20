@@ -11,6 +11,7 @@ int[] loganScores = new int[] { 90, 95, 87, 88, 96, 96 };
 
 int[] studentScores = new int[10];
 
+
 string currentStudentLetterGrade = "";
 
 Console.Clear();
