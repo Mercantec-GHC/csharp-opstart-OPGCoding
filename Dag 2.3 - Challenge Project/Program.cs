@@ -18,6 +18,9 @@ This C# console application is designed to:
     Emma:           85.6    B
     Logan:          91.2    A-
 */
+using System.Linq;
+using static System.Formats.Asn1.AsnWriter;
+
 int examAssignments = 5;
 
 string[] studentNames = new string[] { "Sophia", "Andrew", "Emma", "Logan" };
@@ -60,14 +63,21 @@ foreach (string name in studentNames)
         studentScores = loganScores;
 
     int sumAssignmentScores = 0;
-
     decimal currentStudentGrade = 0;
-
     int gradedAssignments = 0;
+    int extra = 0;
+    decimal credit = 0;
+    decimal sumExamScore = 0;
 
+    for (int i = 0; i > 4; i++) {
+        foreach (decimal examScore in studentScores)
+        {
 
+            sumExamScore += examScore;
 
-
+        }
+    }
+    decimal showSumExamScore = sumExamScore / studentScores.Length;
 
     /* 
     the inner foreach loop sums assignment scores
@@ -83,6 +93,7 @@ foreach (string name in studentNames)
         else
             sumAssignmentScores += score / 10;
     }
+
 
     currentStudentGrade = (decimal)(sumAssignmentScores) / examAssignments;
 
@@ -128,7 +139,9 @@ foreach (string name in studentNames)
 
 
   //Console.WriteLine("Student\t\tExam Score\tOverall\tGrade\tExtra Credit\n");
-    Console.WriteLine($"{currentStudent}\t\t{currentStudentGrade}\t{currentStudentLetterGrade}");
+    Console.WriteLine($"{currentStudent}\t\t{showSumExamScore}\t\t{currentStudentGrade}\t{currentStudentLetterGrade}\t{extra} ({credit} pts)");
+
+
 }
 
 // required for running in VS Code (keeps the Output windows open to view results)
