@@ -1,4 +1,6 @@
-﻿Random dice = new Random();
+﻿using System.Runtime.CompilerServices;
+
+Random dice = new Random();
 int roll = dice.Next(1, 7);
 Console.WriteLine(roll);
 
@@ -11,3 +13,13 @@ Console.WriteLine($"First roll: {roll1}");
 Console.WriteLine($"Second roll: {roll2}");
 Console.WriteLine($"Third roll: {roll3}");
 
+int largerNumber()
+{
+    int firstValue = 500;
+    int secondValue = 600;
+    int largerValue = System.Math.Max(firstValue, secondValue);
+
+    return largerValue;
+}
+
+Console.WriteLine(largerNumber());
