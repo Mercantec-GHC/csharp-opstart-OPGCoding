@@ -39,6 +39,7 @@ Console.WriteLine("Zahirah: " + zahirahSum);
 Console.WriteLine("Jeong: " + jeongSum);
 
 
+
 decimal sophiaScore = (decimal)sophiaSum / currentAssignments;
 decimal nicolasScore = (decimal)nicolasSum / currentAssignments;
 decimal zahirahScore = (decimal)zahirahSum / currentAssignments;
@@ -48,6 +49,7 @@ Console.WriteLine("Sophia: " + sophiaScore + " A");
 Console.WriteLine("Nicolas: " + nicolasScore + " B");
 Console.WriteLine("Zahirah: " + zahirahScore + " B");
 Console.WriteLine("Jeong: " + jeongScore + " A");
+
 
 
 Console.WriteLine("Student\t\tGrade\n");
