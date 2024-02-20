@@ -33,7 +33,7 @@ string currentStudentLetterGrade = "";
 
 // display the header row for scores/grades
 Console.Clear();
-Console.WriteLine("Student\t\tGrade\tLetter Grade\n");
+Console.WriteLine("Student\t\tExam Score\tOverall\tGrade\tExtra Credit\n");
 
 /*
 The outer foreach loop is used to:
@@ -64,6 +64,10 @@ foreach (string name in studentNames)
     decimal currentStudentGrade = 0;
 
     int gradedAssignments = 0;
+
+
+
+
 
     /* 
     the inner foreach loop sums assignment scores
@@ -121,9 +125,9 @@ foreach (string name in studentNames)
     else
         currentStudentLetterGrade = "F";
 
-    // Student         Grade
-    // Sophia:         92.2    A-
 
+
+  //Console.WriteLine("Student\t\tExam Score\tOverall\tGrade\tExtra Credit\n");
     Console.WriteLine($"{currentStudent}\t\t{currentStudentGrade}\t{currentStudentLetterGrade}");
 }
 
