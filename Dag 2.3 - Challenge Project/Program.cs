@@ -69,15 +69,13 @@ foreach (string name in studentNames)
     decimal credit = 0;
     decimal sumExamScore = 0;
 
-    for (int i = 0; i > 4; i++) {
-        foreach (decimal examScore in studentScores)
-        {
-
-            sumExamScore += examScore;
-
-        }
+ 
+    for (int i = 0; i < 5; i++)
+    {
+        sumExamScore += studentScores[i];
     }
-    decimal showSumExamScore = sumExamScore / studentScores.Length;
+
+    decimal showSumExamScore = sumExamScore / 5;
 
     /* 
     the inner foreach loop sums assignment scores
