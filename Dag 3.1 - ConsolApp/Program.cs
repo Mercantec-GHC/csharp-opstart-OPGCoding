@@ -153,32 +153,64 @@
 //    }
 //}
 
-Random random = new Random();
-int prut = 1;
+//Random random = new Random();
+//int prut = 1;
 
-// Do gør at du bliver ved med at prutte indtil du har 7 slået 7 prutter som (Vores while loop fortæller os)
-do
-{
-    Console.WriteLine($"Prut: {prut}");
-    prut++;
-} while (prut != 7);
-Console.WriteLine($"Sidste prut: {prut}");
+//// Do gør at du bliver ved med at prutte indtil du har 7 slået 7 prutter som (Vores while loop fortæller os)
+//do
+//{
+//    Console.WriteLine($"Prut: {prut}");
+//    prut++;
+//} while (prut != 7);
+//Console.WriteLine($"Sidste prut: {prut}");
 
 
-do
-{
-    prut = random.Next(1, 11);
+//do
+//{
+//    prut = random.Next(1, 11);
 
-    if (prut >= 8) continue;
+//    if (prut >= 8) continue;
 
-    Console.WriteLine($"Prut: {prut}");
-} while (prut != 7);
+//    Console.WriteLine($"Prut: {prut}");
+//} while (prut != 7);
 
-/*
-while (prut >= 3)
-{
-    Console.WriteLine(prut);
-    prut = random.Next(1, 11);
-}
-Console.WriteLine($"Last number: {prut}");
-*/
+//while (prut >= 3)
+//{
+//    Console.WriteLine(prut);
+//    prut = random.Next(1, 11);
+//}
+//Console.WriteLine($"Last number: {prut}");
+//*/
+
+
+
+//int heroHealth = 10;
+//int monsterHealth = 10;
+
+//do
+//{
+//    Random MonterRandomAttackDamage = new Random();
+//    int monsterAttackDamage = MonterRandomAttackDamage.Next(1, 11);
+
+//    monsterHealth = monsterHealth - monsterAttackDamage;
+//    Console.WriteLine($"Monster was damaged and lost {monsterAttackDamage} health and now has {monsterHealth} health.\r\n");
+
+//    Random heroRandomAttackDamage = new Random();
+//    int heroAttackDamage = heroRandomAttackDamage.Next(1, 11);
+
+//    heroHealth = heroHealth - heroAttackDamage;
+//    Console.WriteLine($"Hero was damaged and lost {heroAttackDamage} health and now has {heroHealth} health.\r\n");
+
+//}
+//while (monsterHealth > 0 || heroHealth > 0);
+
+//if (monsterHealth <= 0)
+//{
+//    Console.WriteLine("Monster won!");
+//}
+//else if (heroHealth <= 0)
+//{
+//    Console.WriteLine("Hero won!");
+//}
+
+
