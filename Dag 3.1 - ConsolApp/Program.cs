@@ -1,24 +1,24 @@
-﻿// conditional operator
-// <evaluate this condition> ? <if condition is true, return this value> : <if condition is false, return this value>
+﻿// string permission = "Manager";
+string permission = "Admin";
+int level = 55;
 
-int saleAmount = 1001;
-int discount = saleAmount > 1000 ? 100 : 50;
-Console.WriteLine($"Discount: {discount}");
-
-
-Random HeadOrTail = new Random();
-
-Console.Write("Number of coin flips: ");
-int coinsToFlip = Convert.ToInt32(Console.ReadLine());
-
-Console.WriteLine($"You are flipping: {coinsToFlip} coins");
-
-for (int i = 0; i < coinsToFlip; i++)
+if (permission.Contains("Admin") && level > 55)
 {
-    int headOrTail = HeadOrTail.Next(0, 2);
-
-    string coinFlip = headOrTail == 0 ? "Heads" : "Tails";
-
-    Console.WriteLine($"You flipped: {coinFlip}");
-
+    Console.WriteLine("Welcome, Super Admin user.");
+}
+else if (permission.Contains("Admin") && level <= 55)
+{
+    Console.WriteLine("Welcome, Admin user.");
+}
+else if (permission.Contains("Manager") && level >= 20)
+{
+    Console.WriteLine("Contact an Admin for access.");
+}
+else if (permission.Contains("Manager") && level < 20)
+{
+    Console.WriteLine("You do not have sufficient privileges.");
+}
+else
+{
+    Console.WriteLine("You do not have sufficient privileges.");
 }
