@@ -154,11 +154,31 @@
 //}
 
 Random random = new Random();
-int current = 0;
+int prut = 1;
 
 // Do gør at du bliver ved med at prutte indtil du har 7 slået 7 prutter som (Vores while loop fortæller os)
 do
 {
-    Console.WriteLine($"Prut: {current}");
-    current++;
-} while (current <= 7);
+    Console.WriteLine($"Prut: {prut}");
+    prut++;
+} while (prut != 7);
+Console.WriteLine($"Sidste prut: {prut}");
+
+
+do
+{
+    prut = random.Next(1, 11);
+
+    if (prut >= 8) continue;
+
+    Console.WriteLine($"Prut: {prut}");
+} while (prut != 7);
+
+/*
+while (prut >= 3)
+{
+    Console.WriteLine(prut);
+    prut = random.Next(1, 11);
+}
+Console.WriteLine($"Last number: {prut}");
+*/
