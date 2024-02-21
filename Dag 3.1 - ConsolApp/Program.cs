@@ -57,56 +57,78 @@
 
 // SKU = Stock Keeping Unit. 
 // SKU value format: <product #>-<2-letter color code>-<size code>
-string sku = "01-MN-L";
+//string sku = "01-MN-L";
 
-string[] product = sku.Split('-');
+//string[] product = sku.Split('-');
 
-string type = "";
-string color = "";
-string size = "";
+//string type = "";
+//string color = "";
+//string size = "";
 
-switch (product[0])
+//switch (product[0])
+//{
+//    case "01":
+//        type = "Sweat shirt";
+//        break;
+//    case "02":
+//        type = "T-Shirt";
+//        break;
+//    case "03":
+//        type = "Sweat pants";
+//        break;
+//    default:
+//        type = "other";
+//        break;
+//}
+
+//switch (product[1])
+//{
+//    case "BL":
+//        color = "Black";
+//        break;
+//    case "MN":
+//        color = "Maroon";
+//        break;
+//    default:
+//        color = "White";
+//        break;
+//}
+
+//switch (product[2])
+//{
+//    case "S":
+//        size = "Small";
+//        break;
+//    case "M":
+//        size = "Medium";
+//        break;
+//    case "L":
+//        size = "Large";
+//        break;
+//    default:
+//        size = "One Size Fits All";
+//        break;
+//}
+//Console.WriteLine($"Product: {size} {color} {type}");
+
+
+for (int i = 0; i < 10; i++)
 {
-    case "01":
-        type = "Sweat shirt";
-        break;
-    case "02":
-        type = "T-Shirt";
-        break;
-    case "03":
-        type = "Sweat pants";
-        break;
-    default:
-        type = "other";
-        break;
+    Console.WriteLine(i);
 }
 
-switch (product[1])
+for (int i = 10; i >= 0; i--)
 {
-    case "BL":
-        color = "Black";
-        break;
-    case "MN":
-        color = "Maroon";
-        break;
-    default:
-        color = "White";
-        break;
+    Console.WriteLine(i);
 }
 
-switch (product[2])
+for (int i = 0; i < 10; i += 3)
 {
-    case "S":
-        size = "Small";
-        break;
-    case "M":
-        size = "Medium";
-        break;
-    case "L":
-        size = "Large";
-        break;
-    default:
-        size = "One Size Fits All";
-        break;
+    Console.WriteLine(i);
 }
-Console.WriteLine($"Product: {size} {color} {type}");
+
+for (int i = 0; i < 10; i++)
+{
+    Console.WriteLine(i);
+    if (i == 7) break;
+}
