@@ -133,22 +133,32 @@
 //    if (i == 7) break;
 //}
 
-for (int i = 1; i < 101; i++)
+//for (int i = 1; i < 101; i++)
+//{
+//    if((i % 3 == 0) && (i % 5 == 0))
+//    {
+//        Console.WriteLine($"{i} - FizzBuzz");
+//    }
+//    else if (i % 3 == 0)
+//    {
+//        Console.WriteLine($"{i} - Fizz");
+//    }
+//    else if (i % 5 == 0)
+//    {
+//        Console.WriteLine($"{i} - Buzz");
+//    }
+//    else
+//    {
+//        Console.WriteLine($"{i}");
+//    }
+//}
+
+Random random = new Random();
+int current = 0;
+
+// Do gør at du bliver ved med at prutte indtil du har 7 slået 7 prutter som (Vores while loop fortæller os)
+do
 {
-    if((i % 3 == 0) && (i % 5 == 0))
-    {
-        Console.WriteLine($"{i} - FizzBuzz");
-    }
-    else if (i % 3 == 0)
-    {
-        Console.WriteLine($"{i} - Fizz");
-    }
-    else if (i % 5 == 0)
-    {
-        Console.WriteLine($"{i} - Buzz");
-    }
-    else
-    {
-        Console.WriteLine($"{i}");
-    }
-}
+    Console.WriteLine($"Prut: {current}");
+    current++;
+} while (current <= 7);
