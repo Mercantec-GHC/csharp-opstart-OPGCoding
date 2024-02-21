@@ -8,7 +8,12 @@ Console.WriteLine($"Discount: {discount}");
 
 Random HeadOrTail = new Random();
 
-for (int i = 0; i < 10; i++)
+Console.Write("Number of coin flips: ");
+int coinsToFlip = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine($"You are flipping: {coinsToFlip} coins");
+
+for (int i = 0; i < coinsToFlip; i++)
 {
     int headOrTail = HeadOrTail.Next(0, 2);
 
