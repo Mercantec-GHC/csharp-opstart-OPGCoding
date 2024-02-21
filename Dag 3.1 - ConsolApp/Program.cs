@@ -19,6 +19,6 @@ for (int i = 0; i < coinsToFlip; i++)
 
     string coinFlip = headOrTail == 0 ? "Heads" : "Tails";
 
-    Console.WriteLine(coinFlip);
+    Console.WriteLine($"You flipped: {coinFlip}");
 
 }
