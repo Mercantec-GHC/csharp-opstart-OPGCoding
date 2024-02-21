@@ -243,24 +243,55 @@
 //int userInput;
 //bool isValid = false;
 
-string userInput;
-bool isValidInput = false;
+//string userInput;
+//bool isValidInput = false;
 
-Console.WriteLine("Indtast en rolle (Administrator, Manager eller User):");
+//Console.WriteLine("Indtast en rolle (Administrator, Manager eller User):");
 
-do
+//do
+//{
+//    userInput = Console.ReadLine()?.Trim().ToLower();
+
+//    if (userInput == "administrator" || userInput == "manager" || userInput == "user")
+//    {
+//        isValidInput = true;
+//    }
+//    else
+//    {
+//        Console.WriteLine("Dit input er ikke en gyldig rolle. Prøv igen.");
+//    }
+
+//} while (!isValidInput);
+
+//Console.WriteLine($"Dit input ({userInput}) er blevet accepteret.");
+
+
+
+string[] myStrings = new string[2] { "Jeg kan lide pizza. Jeg kan lide stegt kylling. Jeg kan lide salat", "Jeg kan lide alle tre retter på menuen" };
+
+foreach (string myString in myStrings)
 {
-    userInput = Console.ReadLine()?.Trim().ToLower();
+    int periodLocation;
+    int startPosition = 0;
 
-    if (userInput == "administrator" || userInput == "manager" || userInput == "user")
+    Console.WriteLine("Sætninger i strengen:");
+
+    do
     {
-        isValidInput = true;
-    }
-    else
-    {
-        Console.WriteLine("Dit input er ikke en gyldig rolle. Prøv igen.");
-    }
+        periodLocation = myString.IndexOf('.', startPosition);
 
-} while (!isValidInput);
+        if (periodLocation != -1)
+        {
+            string sentence = myString.Substring(startPosition, periodLocation - startPosition + 1).TrimStart();
+            Console.WriteLine(sentence);
+            startPosition = periodLocation + 1;
+        }
+        else
+        {
+            string lastSentence = myString.Substring(startPosition).TrimStart();
+            Console.WriteLine(lastSentence);
+        }
 
-Console.WriteLine($"Dit input ({userInput}) er blevet accepteret.");
+    } while (periodLocation != -1);
+}
+
