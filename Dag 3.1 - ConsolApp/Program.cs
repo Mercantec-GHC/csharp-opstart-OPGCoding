@@ -214,3 +214,25 @@
 //}
 
 
+using System;
+
+int userInput;
+bool isValid = false;
+
+do
+{
+    Console.WriteLine("Indtast et heltal:");
+
+    string input = Console.ReadLine();
+    isValid = int.TryParse(input, out userInput);
+    
+    
+    if (!isValid)
+    {
+    Console.WriteLine("Ugyldigt input. Prøv igen.");
+    }
+
+} 
+while (!isValid);
+
+Console.WriteLine("Du har indtastet: " + userInput);
