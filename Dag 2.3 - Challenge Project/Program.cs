@@ -80,12 +80,15 @@ foreach (string name in studentNames)
         gradedAssignments += 1;
 
         if (gradedAssignments <= examAssignments)
+        {
             sumAssignmentScores += score;
-
+        }
         else
+        {
             sumAssignmentScores += (decimal)score / 10;
-    }
 
+        }
+    }
 
     currentStudentGrade = (decimal)sumAssignmentScores / (decimal)examAssignments;
 
@@ -94,7 +97,7 @@ foreach (string name in studentNames)
         sumExamScore += studentScores[i];
     }
 
-    decimal showSumExamScore = sumExamScore / 5;
+    decimal showSumExamScore = sumExamScore / examAssignments;
 
     extra += (int)showSumExamScore;
 
