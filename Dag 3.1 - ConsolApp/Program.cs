@@ -267,31 +267,31 @@
 
 
 
-string[] myStrings = new string[2] { "Jeg kan lide pizza. Jeg kan lide stegt kylling. Jeg kan lide salat", "Jeg kan lide alle tre retter på menuen" };
+//string[] myStrings = new string[2] { "Jeg kan lide pizza. Jeg kan lide stegt kylling. Jeg kan lide salat", "Jeg kan lide alle tre retter på menuen" };
 
-foreach (string myString in myStrings)
-{
-    int periodLocation;
-    int startPosition = 0;
+//foreach (string myString in myStrings)
+//{
+//    int periodLocation;
+//    int startPosition = 0;
 
-    Console.WriteLine("Sætninger i strengen:");
+//    Console.WriteLine("Sætninger i strengen:");
 
-    do
-    {
-        periodLocation = myString.IndexOf('.', startPosition);
+//    do
+//    {
+//        periodLocation = myString.IndexOf('.', startPosition);
 
-        if (periodLocation != -1)
-        {
-            string sentence = myString.Substring(startPosition, periodLocation - startPosition + 1).TrimStart();
-            Console.WriteLine(sentence);
-            startPosition = periodLocation + 1;
-        }
-        else
-        {
-            string lastSentence = myString.Substring(startPosition).TrimStart();
-            Console.WriteLine(lastSentence);
-        }
+//        if (periodLocation != -1)
+//        {
+//            string sentence = myString.Substring(startPosition, periodLocation - startPosition + 1).TrimStart();
+//            Console.WriteLine(sentence);
+//            startPosition = periodLocation + 1;
+//        }
+//        else
+//        {
+//            string lastSentence = myString.Substring(startPosition).TrimStart();
+//            Console.WriteLine(lastSentence);
+//        }
 
-    } while (periodLocation != -1);
-}
+//    } while (periodLocation != -1);
+//}
 
