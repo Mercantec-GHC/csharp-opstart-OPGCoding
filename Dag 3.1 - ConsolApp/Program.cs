@@ -214,25 +214,53 @@
 //}
 
 
-using System;
+//using System;
 
-int userInput;
-bool isValid = false;
+//int userInput;
+//bool isValid = false;
+
+//do
+//{
+//    Console.WriteLine("Indtast et heltal:");
+
+//    string input = Console.ReadLine();
+//    isValid = int.TryParse(input, out userInput);
+
+
+//    if (!isValid)
+//    {
+//    Console.WriteLine("Ugyldigt input. Prøv igen.");
+//    }
+
+//} 
+//while (!isValid);
+
+//Console.WriteLine("Du har indtastet: " + userInput);
+
+
+//using System;
+
+//int userInput;
+//bool isValid = false;
+
+string userInput;
+bool isValidInput = false;
+
+Console.WriteLine("Indtast en rolle (Administrator, Manager eller User):");
 
 do
 {
-    Console.WriteLine("Indtast et heltal:");
+    userInput = Console.ReadLine()?.Trim().ToLower();
 
-    string input = Console.ReadLine();
-    isValid = int.TryParse(input, out userInput);
-    
-    
-    if (!isValid)
+    if (userInput == "administrator" || userInput == "manager" || userInput == "user")
     {
-    Console.WriteLine("Ugyldigt input. Prøv igen.");
+        isValidInput = true;
+    }
+    else
+    {
+        Console.WriteLine("Dit input er ikke en gyldig rolle. Prøv igen.");
     }
 
-} 
-while (!isValid);
+} while (!isValidInput);
 
-Console.WriteLine("Du har indtastet: " + userInput);
+Console.WriteLine($"Dit input ({userInput}) er blevet accepteret.");
