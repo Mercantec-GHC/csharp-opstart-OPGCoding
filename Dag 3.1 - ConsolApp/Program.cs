@@ -17,7 +17,7 @@ for (int i = 0; i < coinsToFlip; i++)
 {
     int headOrTail = HeadOrTail.Next(0, 2);
 
-    string coinFlip = headOrTail == 0 ? "Head" : "Tail";
+    string coinFlip = headOrTail == 0 ? "Heads" : "Tails";
 
     Console.WriteLine(coinFlip);
 
