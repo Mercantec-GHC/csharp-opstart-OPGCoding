@@ -157,15 +157,34 @@
 //}
 
 
-string value = "abc123";
-char[] valueArray = value.ToCharArray();
-Array.Reverse(valueArray);
-// string result = new string(valueArray);
-string result = String.Join(",", valueArray);
+//string value = "abc123";
+//char[] valueArray = value.ToCharArray();
+//Array.Reverse(valueArray);
+//// string result = new string(valueArray);
+//string result = String.Join(",", valueArray);
+//Console.WriteLine(result);
+
+//string[] items = result.Split(',');
+//foreach (string item in items)
+//{
+//    Console.WriteLine(item);
+//}
+
+
+
+string pangram = "The quick brown fox jumps over the lazy dog";
+String[] pangramStringArray = pangram.Split(' ');
+
+for (int i = 0; i < pangramStringArray.Length; i++)
+{
+    char[] pangramLetter = pangramStringArray[i].ToCharArray();
+    Array.Reverse(pangramLetter);
+    pangramStringArray[i] = new string(pangramLetter);
+}
+
+string result = string.Join(" ", pangramStringArray);
 Console.WriteLine(result);
 
-string[] items = result.Split(',');
-foreach (string item in items)
-{
-    Console.WriteLine(item);
-}
+
+
+
