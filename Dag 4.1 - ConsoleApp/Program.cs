@@ -41,4 +41,8 @@ else
     Console.WriteLine("Unable to report the measurement.");
 
 }
-Console.WriteLine($"Measurement (w/ offset): {50 + result}");
+if (result > 0)
+{
+    Console.WriteLine($"Measurement (w/ offset): {50 + result}");
+
+}
