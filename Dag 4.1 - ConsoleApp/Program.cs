@@ -298,18 +298,64 @@
 //Console.WriteLine(comparisonMessage);
 
 
-string currentProduct = "Magic Yield";
-int currentShares = 2975000;
-decimal currentReturn = 0.1275m;
-decimal currentProfit = 55000000.0m;
-string comparisonMessage = "";
+//string currentProduct = "Magic Yield";
+//int currentShares = 2975000;
+//decimal currentReturn = 0.1275m;
+//decimal currentProfit = 55000000.0m;
+//string comparisonMessage = "";
 
-comparisonMessage = currentProduct.PadRight(20);
-Console.WriteLine(comparisonMessage);
+//comparisonMessage = currentProduct.PadRight(20);
+//Console.WriteLine(comparisonMessage);
 
-comparisonMessage += String.Format("{0:P}", currentReturn).PadRight(10);
-Console.WriteLine(comparisonMessage);
+//comparisonMessage += String.Format("{0:P}", currentReturn).PadRight(10);
+//Console.WriteLine(comparisonMessage);
 
-comparisonMessage += String.Format("{0:C}", currentProfit).PadRight(20);
-Console.WriteLine(comparisonMessage);
+//comparisonMessage += String.Format("{0:C}", currentProfit).PadRight(20);
+//Console.WriteLine(comparisonMessage);
+
+
+//string message = "Find what is (inside the parentheses)";
+
+//int openingPosition = message.IndexOf('(');
+//int closingPosition = message.IndexOf(')');
+
+//openingPosition += 1;
+
+//int length = closingPosition - openingPosition;
+//Console.WriteLine(message.Substring(openingPosition, length));
+
+string openingPositionText = "<span>";
+string closingPositionText = "</span>";
+
+string message = $"What is the value {openingPositionText} between the tags{closingPositionText}?";
+
+int openingPosition = message.IndexOf(openingPositionText);
+int closingPosition = message.IndexOf(closingPositionText);
+
+openingPosition += openingPositionText.Length;
+int length = closingPosition - openingPosition;
+Console.WriteLine(message.Substring(openingPosition, length));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
