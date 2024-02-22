@@ -194,17 +194,13 @@ Array.Sort(orderStreamArray);
 foreach (string word in orderStreamArray)
 {
     int charCount = word.Length;
-    if (charCount < 4)
+    if (charCount == 4)
     {
-        Console.WriteLine($"{word} -- error");
-    }
-    else if (charCount > 4) 
-    {
-        Console.WriteLine($"{word} -- error");
+        Console.WriteLine($"{word}");
     }
     else
     {
-        Console.WriteLine(word);
+        Console.WriteLine($"{word} -- error");
     }
 
 }
