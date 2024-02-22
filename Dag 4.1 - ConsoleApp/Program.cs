@@ -73,7 +73,7 @@ int value1 = 12;
 decimal value2 = 6.2m;
 float value3 = 4.3f;
 
-int result1 = Convert.ToInt32(value1 / value2);
+int result1 = Convert.ToInt32((decimal)value1 / value2);
 decimal result2 = value2 / (decimal)value3;
 float result3 = value3 / value1;
 
