@@ -172,19 +172,40 @@
 
 
 
-string pangram = "The quick brown fox jumps over the lazy dog";
-String[] pangramStringArray = pangram.Split(' ');
+//string pangram = "The quick brown fox jumps over the lazy dog";
+//String[] pangramStringArray = pangram.Split(' ');
 
-for (int i = 0; i < pangramStringArray.Length; i++)
+//for (int i = 0; i < pangramStringArray.Length; i++)
+//{
+//    char[] pangramLetter = pangramStringArray[i].ToCharArray();
+//    Array.Reverse(pangramLetter);
+//    pangramStringArray[i] = new string(pangramLetter);
+//}
+
+//string result = string.Join(" ", pangramStringArray);
+//Console.WriteLine(result);
+
+
+string orderStream = "B123,C234,A345,C15,B177,G3003,C235,B179";
+string[] orderStreamArray = orderStream.Split(',');
+Array.Sort(orderStreamArray);
+
+
+foreach (string word in orderStreamArray)
 {
-    char[] pangramLetter = pangramStringArray[i].ToCharArray();
-    Array.Reverse(pangramLetter);
-    pangramStringArray[i] = new string(pangramLetter);
+    int charCount = word.Length;
+    if (charCount < 4)
+    {
+        Console.WriteLine($"{word} -- error");
+    }
+    else if (charCount > 4) 
+    {
+        Console.WriteLine($"{word} -- error");
+    }
+    else
+    {
+        Console.WriteLine(word);
+    }
+
 }
-
-string result = string.Join(" ", pangramStringArray);
-Console.WriteLine(result);
-
-
-
 
