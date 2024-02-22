@@ -324,20 +324,28 @@
 //int length = closingPosition - openingPosition;
 //Console.WriteLine(message.Substring(openingPosition, length));
 
-string openingPositionText = "<span>";
-string closingPositionText = "</span>";
+//string openingPositionText = "<span>";
+//string closingPositionText = "</span>";
 
-string message = $"What is the value {openingPositionText} between the tags{closingPositionText}?";
+//string message = $"What is the value {openingPositionText} between the tags{closingPositionText}?";
 
-int openingPosition = message.IndexOf(openingPositionText);
-int closingPosition = message.IndexOf(closingPositionText);
+//int openingPosition = message.IndexOf(openingPositionText);
+//int closingPosition = message.IndexOf(closingPositionText);
 
-openingPosition += openingPositionText.Length;
-int length = closingPosition - openingPosition;
-Console.WriteLine(message.Substring(openingPosition, length));
+//openingPosition += openingPositionText.Length;
+//int length = closingPosition - openingPosition;
+//Console.WriteLine(message.Substring(openingPosition, length));
 
 
+string message = "Help (find) the {opening symbols}";
+Console.WriteLine($"Searching THIS Message: {message}");
+char[] openSymbols = { '[', '{', '(' };
+int startPosition = 5;
+int openingPosition = message.IndexOfAny(openSymbols);
+Console.WriteLine($"Found WITHOUT using startPosition: {message.Substring(openingPosition)}");
 
+openingPosition = message.IndexOfAny(openSymbols, startPosition);
+Console.WriteLine($"Found WITH using startPosition {startPosition}:  {message.Substring(openingPosition)}");
 
 
 
