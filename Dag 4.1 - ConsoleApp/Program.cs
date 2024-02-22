@@ -216,11 +216,12 @@
 //Console.WriteLine("{1} {0}!", first, second);
 //Console.WriteLine("{0} {1} {0}!", first, second);
 
-decimal price = 123.35m;
-int discount = 50;
-Console.WriteLine($"Price: {price:C} (Save {discount:C})");
+//decimal price = 123.35m;
+//int discount = 50;
+//Console.WriteLine($"Price: {price:C} (Save {discount:C})");
 
-
+decimal measurement = 123456.78912345345324m;
+Console.WriteLine($"Measurement: {measurement:N9} units");
 
 
 
