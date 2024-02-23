@@ -198,32 +198,68 @@
 //}
 
 
-double pi = 3.14159;
-PrintCircleInfo(12);
-PrintCircleInfo(24);
+//double pi = 3.14159;
+//PrintCircleInfo(12);
+//PrintCircleInfo(24);
 
-void PrintCircleArea(int radius)
+//void PrintCircleArea(int radius)
+//{
+//	double area = pi * (radius * radius);
+//	Console.WriteLine($"Area = {area}");
+//}
+
+//void PrintCircleCircumference(int radius)
+//{
+//	double circumference = 2 * pi * radius;
+//	Console.WriteLine($"Circumference = {circumference}");
+//}
+
+//void PrintCircleInfo(int radius)
+//{
+//	Console.WriteLine($"Circle with radius {radius}");
+//	PrintCircleArea(radius);
+//	PrintCircleCircumference(radius);
+//}
+
+
+//int a = 3;
+//int b = 4;
+//int c = 0;
+
+//Multiply(a, b, c);
+//Console.WriteLine($"global statement: {a} x {b} = {c}");
+
+//void Multiply(int a, int b, int c)
+//{
+//	c = a * b;
+//	Console.WriteLine($"inside Multiply method: {a} x {b} = {c}");
+//}
+
+
+string[,] corporate =
 {
-	double area = pi * (radius * radius);
-	Console.WriteLine($"Area = {area}");
+	{"Robert", "Bavin"}, {"Simon", "Bright"},
+	{"Kim", "Sinclair"}, {"Aashrita", "Kamath"},
+	{"Sarah", "Delucchi"}, {"Sinan", "Ali"}
+};
+
+string[,] external =
+{
+	{"Vinnie", "Ashton"}, {"Cody", "Dysart"},
+	{"Shay", "Lawrence"}, {"Daren", "Valdes"}
+};
+
+string externalDomain = "hayworth.com";
+
+for (int i = 0; i < corporate.GetLength(0); i++)
+{
+	// display internal email addresses
 }
 
-void PrintCircleCircumference(int radius)
+for (int i = 0; i < external.GetLength(0); i++)
 {
-	double circumference = 2 * pi * radius;
-	Console.WriteLine($"Circumference = {circumference}");
+	// display external email addresses
 }
-
-void PrintCircleInfo(int radius)
-{
-	Console.WriteLine($"Circle with radius {radius}");
-	PrintCircleArea(radius);
-	PrintCircleCircumference(radius);
-}
-
-
-
-
 
 
 
