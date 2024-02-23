@@ -335,59 +335,101 @@
 //}
 
 
-Random random = new Random();
+//Random random = new Random();
 
-Console.WriteLine("Would you like to play? (Y/N)");
-if (ShouldPlay())
+//Console.WriteLine("Would you like to play? (Y/N)");
+//if (ShouldPlay())
+//{
+//	PlayGame();
+//}
+
+//bool ShouldPlay()
+//{
+//	string response = Console.ReadLine();
+//	return response.ToLower().Equals("y");
+//}
+
+//void PlayGame()
+//{
+//	var play = true;
+
+//	while (play)
+//	{
+//		var target = GetTarget();
+//		var roll = RollDice();
+
+//		Console.WriteLine($"Roll a number greater than {target} to win!");
+//		Console.WriteLine($"You rolled a {roll}");
+//		Console.WriteLine(WinOrLose(roll, target));
+//		Console.WriteLine("\nPlay again? (Y/N)");
+
+//		play = ShouldPlay();
+//	}
+//}
+
+//int GetTarget()
+//{
+//	return random.Next(1, 6);
+//}
+
+//int RollDice()
+//{
+//	return random.Next(1, 7);
+//}
+
+//string WinOrLose(int roll, int target)
+//{
+//	if (roll > target)
+//	{
+//		return "You win!";
+//	}
+//	return "You lose!";
+//}
+
+
+using System;
+
+string[] pettingZoo =
 {
-	PlayGame();
-}
+	"alpacas", "capybaras", "chickens", "ducks", "emus", "geese",
+	"goats", "iguanas", "kangaroos", "lemurs", "llamas", "macaws",
+	"ostriches", "pigs", "ponies", "rabbits", "sheep", "tortoises",
+};
 
-bool ShouldPlay()
+RandomizeAnimals();
+string[,] group = AssignGroup();
+Console.WriteLine("School A");
+// PrintGroup(group);
+
+void RandomizeAnimals()
 {
-	string response = Console.ReadLine();
-	return response.ToLower().Equals("y");
-}
+	Random random = new Random();
 
-void PlayGame()
-{
-	var play = true;
-
-	while (play)
+	for (int i = 0; i < pettingZoo.Length; i++)
 	{
-		var target = GetTarget();
-		var roll = RollDice();
+		int r = random.Next(i, pettingZoo.Length);
 
-		Console.WriteLine($"Roll a number greater than {target} to win!");
-		Console.WriteLine($"You rolled a {roll}");
-		Console.WriteLine(WinOrLose(roll, target));
-		Console.WriteLine("\nPlay again? (Y/N)");
-
-		play = ShouldPlay();
+		string temp = pettingZoo[r];
+		pettingZoo[r] = pettingZoo[i];
+		pettingZoo[i] = temp;
 	}
 }
 
-int GetTarget()
+string[,] AssignGroup(int groups = 6)
 {
-	return random.Next(1, 6);
-}
+	string[,] result = new string[groups, pettingZoo.Length / groups];
+	int start = 0;
 
-int RollDice()
-{
-	return random.Next(1, 7);
-}
-
-string WinOrLose(int roll, int target)
-{
-	if (roll > target)
+	for (int i = 0; i < groups; i++)
 	{
-		return "You win!";
+		for (int j = 0; j < result.GetLength(1); j++)
+		{
+			result[i, j] = pettingZoo[start++];
+		}
 	}
-	return "You lose!";
+
+	return result;
 }
-
-
-
 
 
 
